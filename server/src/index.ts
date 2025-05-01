@@ -4,7 +4,9 @@ import bodyParser from 'body-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
+
 // route imports
+import dashboardRoutes from './routes/dashboardRoutes'; 
 
 // configurations
 dotenv.config();
@@ -18,9 +20,7 @@ app.use(bodyParser.urlencoded({extended: false }));
 app.use(cors());
 
 // routes
-app.get("/hello", (req, res) => {
-    res.send("Hello World!");
-})
+app.use("/dashboard",dashboardRoutes) // http://localhost:8000/dashboard
 
 // server
 const port = process.env.PORT || 3001;
