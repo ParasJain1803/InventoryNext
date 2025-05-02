@@ -8,41 +8,41 @@ export interface Product {
     stockQuantity: number;
   }
   
-  export interface NewProduct {
+export interface NewProduct {
     name: string;
     price: number;
     rating?: number;
     stockQuantity: number;
   }
   
-  export interface SalesSummary {
+export interface SalesSummary {
     salesSummaryId: string;
     totalValue: number;
     changePercentage?: number;
     date: string;
   }
   
-  export interface PurchaseSummary {
+export interface PurchaseSummary {
     purchaseSummaryId: string;
     totalPurchased: number;
     changePercentage?: number;
     date: string;
   }
   
-  export interface ExpenseSummary {
+export interface ExpenseSummary {
     expenseSummarId: string;
     totalExpenses: number;
     date: string;
   }
   
-  export interface ExpenseByCategorySummary {
+export interface ExpenseByCategorySummary {
     expenseByCategorySummaryId: string;
     category: string;
     amount: string;
     date: string;
   }
   
-  export interface DashboardMetrics {
+export interface DashboardMetrics {
     popularProducts: Product[];
     salesSummary: SalesSummary[];
     purchaseSummary: PurchaseSummary[];
@@ -50,7 +50,7 @@ export interface Product {
     expenseByCategorySummary: ExpenseByCategorySummary[];
   }
   
-  export interface User {
+export interface User {
     userId: string;
     name: string;
     email: string;
