@@ -58,15 +58,15 @@ const CardSalesSummary = () => {
           {/* BODY */}
           <div>
             {/* BODY HEADER */}
-            <div className="flex justify-between items-center mb-6 px-7 mt-5">
+            <div className="flex justify-between items-center mb-2 px-7 mt-5">
               <div className="text-lg font-medium">
                 <p className="text-xs text-gray-400">Value</p>
                 <span className="text-2xl font-extrabold">
-                  ₹
-                  {(totalValueSum / 100000).toLocaleString("en", {
+                  $
+                  {(totalValueSum / 1000000).toLocaleString("en", {
                     maximumFractionDigits: 2,
                   })}
-                  L
+                  m
                 </span>
                 <span className="text-green-500 text-sm ml-2">
                   <TrendingUp className="inline w-4 h-4 mr-1" />
@@ -101,7 +101,7 @@ const CardSalesSummary = () => {
                 />
                 <YAxis
                   tickFormatter={(value) => {
-                    return `₹${(value / 100000).toFixed(0)}L`;
+                    return `$${(value / 1000000).toFixed(0)}m`;
                   }}
                   tick={{ fontSize: 12, dx: -1 }}
                   tickLine={false}
@@ -133,7 +133,7 @@ const CardSalesSummary = () => {
           {/* FOOTER */}
           <div>
             <hr />
-            <div className="flex justify-between items-center mt-6 text-sm px-7 mb-4">
+            <div className="flex justify-between items-center mt-2 text-sm px-7 mb-2">
               <p>{salesData.length || 0} days</p>
               <p className="text-sm">
                 Highest Sales Date:{" "}
