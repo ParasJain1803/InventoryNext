@@ -12,8 +12,10 @@ import {
   Menu,
   Settings,
   SlidersHorizontal,
+  TrendingUp,
   User,
 } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
@@ -80,7 +82,14 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        <div>logo</div>
+        <div>
+          <Image
+            src="/logo.png"
+            width={50}
+            height={50}
+            alt="Picture of the author"
+          />
+        </div>
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
@@ -132,6 +141,12 @@ const Sidebar = () => {
           href="/expenses"
           icon={IndianRupee}
           label="Expenses"
+          isCollapsed={isSidebarCollapsed}
+        />
+        <SidebarLink
+          href="/forecast"
+          icon={TrendingUp}
+          label="Forecast"
           isCollapsed={isSidebarCollapsed}
         />
       </div>

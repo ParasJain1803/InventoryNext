@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Bell, Menu, Moon, Search, Settings, Sun } from "lucide-react";
+import { Bell, Menu, Moon, Search, Settings, Sun, User2 } from "lucide-react";
 import Link from "next/link";
 import { useAppDispatch, useAppSelector } from "@/app/redux";
 import { setIsDarkMode, setIsSidebarCollapsed } from "@/state";
@@ -66,8 +66,7 @@ const Navbar = () => {
           </div>
           <hr className="w-0 h-7 border border-solid border-l border-gray-300 mx-3" />
           <div className="flex items-center gap-3 cursor-pointer">
-            <div className="w-9 h-9">Image</div>
-            <span className="font-semibold">Paras Jain</span>
+            <User2 />
           </div>
         </div>
         <Link href="/settings">
